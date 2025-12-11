@@ -1,101 +1,73 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarık Acar | NFC Kartvizit</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #e8e8e4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    .card {
+        background: white;
+        width: 90%;
+        max-width: 420px;
+        padding: 30px;
+        border-radius: 22px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        text-align: center;
+        margin: 0 auto;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            background-color: #e8e8e4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    h2 {
+        color: #bca879;
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-weight: 600;
+    }
 
-        .card {
-            background: white;
-            width: 90%;
-            max-width: 420px;
-            padding: 30px;
-            border-radius: 22px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            text-align: center; /* TAM ORTALAMA */
-            margin: 0 auto;
-        }
+    .subtitle {
+        color: #365b46;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
 
-        h2 {
-            color: #bca879; /* Altın */
-            margin-bottom: 10px;
-            font-size: 28px;
-            font-weight: 600;
-            text-align: center;
-        }
+    /* 🔥 BUTONLAR ARTIK TAM ORTADA VE KAYMA SIFIR */
+    .btn {
+        display: block;
+        max-width: 100%;        /* Taşmayı tamamen engeller */
+        width: 100%;
+        padding: 15px;
+        background-color: #01332c;
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        margin: 12px auto;      /* Ortalar */
+        font-size: 17px;
+        transition: 0.3s;
+        font-weight: 500;
+        text-align: center;
+        box-sizing: border-box; /* width 100% taşmasını %100 engeller */
+    }
 
-        .subtitle {
-            color: #365b46;
-            font-size: 16px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
+    .btn:hover {
+        background-color: #bca879;
+        color: #01332c;
+    }
 
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: #01332c;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            margin: 12px auto; /* TIKIR TIKIR ORTALAMA */
-            font-size: 17px;
-            transition: 0.3s;
-            font-weight: 500;
-            text-align: center;
-        }
+    .footer {
+        margin-top: 20px;
+        font-size: 13px;
+        color: #365b46;
+    }
 
-        .btn:hover {
-            background-color: #bca879;
-            color: #01332c;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #365b46;
-            text-align: center;
-        }
-
-        .metafen {
-            margin-top: 5px;
-            font-size: 12px;
-            color: #01332c;
-            opacity: 0.8;
-            font-weight: 600;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="card">
-        <h2>Tarık ACAR</h2>
-        <div class="subtitle">Elektrik Teknikeri • İstanbul</div>
-
-        <a class="btn" href="tel:+905443755556">📞 Telefon Et</a>
-        <a class="btn" href="https://wa.me/905443755556">💬 WhatsApp</a>
-        <a class="btn" href="https://instagram.com/tarik.acar">📸 Instagram</a>
-
-        <div class="footer">© 2025 • NFC Kartvizit</div>
-        <div class="metafen">Powered by Metafen</div>
-    </div>
-
-</body>
-</html>
+    .metafen {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #01332c;
+        opacity: 0.8;
+        font-weight: 600;
+    }
+</style>
