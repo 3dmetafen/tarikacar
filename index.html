@@ -1,73 +1,153 @@
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Poppins", sans-serif;
-        background-color: #e8e8e4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFC Kart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
 
-    .card {
-        background: white;
-        width: 90%;
-        max-width: 420px;
-        padding: 30px;
-        border-radius: 22px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        text-align: center;
-        margin: 0 auto;
-    }
+        .card {
+            width: 330px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+            text-align: center;
+        }
 
-    h2 {
-        color: #bca879;
-        margin-bottom: 10px;
-        font-size: 28px;
-        font-weight: 600;
-    }
+        .profile-image {
+            display: flex;
+            justify-content: center;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
 
-    .subtitle {
-        color: #365b46;
-        font-size: 16px;
-        margin-bottom: 25px;
-    }
+        .profile-image img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00ff99;
+            box-shadow: 0 4px 20px rgba(0, 255, 150, 0.3);
+        }
 
-    /* 🔥 BUTONLAR ARTIK TAM ORTADA VE KAYMA SIFIR */
-    .btn {
-        display: block;
-        max-width: 100%;        /* Taşmayı tamamen engeller */
-        width: 100%;
-        padding: 15px;
-        background-color: #01332c;
-        color: white;
-        text-decoration: none;
-        border-radius: 12px;
-        margin: 12px auto;      /* Ortalar */
-        font-size: 17px;
-        transition: 0.3s;
-        font-weight: 500;
-        text-align: center;
-        box-sizing: border-box; /* width 100% taşmasını %100 engeller */
-    }
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
 
-    .btn:hover {
-        background-color: #bca879;
-        color: #01332c;
-    }
+        .job {
+            font-size: 15px;
+            margin-bottom: 25px;
+            color: #00ff99;
+        }
 
-    .footer {
-        margin-top: 20px;
-        font-size: 13px;
-        color: #365b46;
-    }
+        .link-button {
+            width: 100%;
+            padding: 14px;
+            background: #00ff99;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0, 255, 150, 0.3);
+            transition: 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .metafen {
-        margin-top: 5px;
-        font-size: 12px;
-        color: #01332c;
-        opacity: 0.8;
-        font-weight: 600;
-    }
-</style>
+        .link-button:hover {
+            background: #00e68a;
+            transform: scale(1.02);
+        }
+
+        .icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .footer span {
+            color: #00ff99;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- PROFİL FOTOĞRAFI -->
+        <div class="profile-image">
+            <img src="https://i.ibb.co/1YzjLP8x/d0c12ea4-8456-4d2a-9022-4fc7b18a1ebc.jpg" alt="Profil Fotoğrafı">
+        </div>
+
+        <!-- İSİM - ÜNVAN -->
+        <div class="name">Tarık Acar</div>
+        <div class="job">Electrical Engineer</div>
+
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/tarik.acar1/" target="_blank">
+            <button class="link-button">
+                <!-- Instagram SVG -->
+                <svg class="icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="black" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="3.5" stroke="black" stroke-width="2"/>
+                    <circle cx="17.5" cy="6.5" r="1.2" fill="black"/>
+                </svg>
+                Instagram
+            </button>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/905555555555" target="_blank">
+            <button class="link-button">
+                <!-- WhatsApp SVG -->
+                <svg class="icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2a9.9 9.9 0 0 0-8.6 15l-1.3 4.7 4.8-1.2A10 10 0 1 0 12 2z" stroke="black" stroke-width="2"/>
+                    <path d="M16 14.5c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-1 .9-.5 0-1-.4a6.7 6.7 0 0 1-2-2.4c-.2-.4 0-.6.2-.8l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.8-.9-2.4c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3a3 3 0 0 0-1 2.3c0 2 1.8 4 2 4.2.2.2 3.5 3.8 7 3.8 1.2 0 2-.4 2.2-.6s.9-.7 1-1.4c.1-.8.1-1.4 0-1.5s-.3-.2-.6-.3z" fill="black"/>
+                </svg>
+                WhatsApp
+            </button>
+        </a>
+
+        <!-- TELEFON -->
+        <a href="tel:+905555555555">
+            <button class="link-button">
+                <!-- Telefon SVG -->
+                <svg class="icon" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 3l4 1-1 4-2 2a16 16 0 0 0 7 7l2-2 4 1-1 4c-.2.8-1 1.3-1.8 1.3A15.5 15.5 0 0 1 3.7 6.8C3.4 6 3.9 5.2 4.7 5L5 3z" stroke="black" stroke-width="2"/>
+                </svg>
+                Telefon
+            </button>
+        </a>
+
+        <div class="footer">
+            2025 – NFC Web Card<br>
+            <span>Powered by Metafen</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
